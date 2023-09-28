@@ -4,6 +4,8 @@ import { SITE } from "@config";
 import { writeFile } from "node:fs/promises";
 import { Resvg } from "@resvg/resvg-js";
 
+
+
 const fetchFonts = async () => {
   // Regular Font
   const fontFileRegular = await fetch(
@@ -34,6 +36,7 @@ const ogImage = (text: string) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        fontFamily: "MiSans",
       }}
     >
       <div
