@@ -7,15 +7,15 @@ import { Resvg } from "@resvg/resvg-js";
 const fetchFonts = async () => {
   // Regular Font
   const fontFileRegular = await fetch(
-    // new URL("/fonts/MiSans-Regular.ttf", SITE.website).href
-    "https://www.1001fonts.com/download/font/ibm-plex-mono.regular.ttf"
+    new URL("/fonts/MiSans-Regular.ttf", SITE.website).href
+    // "https://www.1001fonts.com/download/font/ibm-plex-mono.regular.ttf"
   );
   const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
 
   // Bold Font
   const fontFileBold = await fetch(
-    //new URL("/fonts/MiSans-Bold.ttf", SITE.website).href
-    "https://www.1001fonts.com/download/font/ibm-plex-mono.bold.ttf"
+    new URL("/fonts/MiSans-Bold.ttf", SITE.website).href
+    // "https://www.1001fonts.com/download/font/ibm-plex-mono.bold.ttf"
   );
   const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
 
