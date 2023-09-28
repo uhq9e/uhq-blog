@@ -7,7 +7,6 @@ tags:
   - yuyuyu
   - nowayu
   - 若千
-ogImage: ""
 ---
 
 ![爱要怎样才好看](/blog-images/爱要怎样才好看.jpg)
