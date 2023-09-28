@@ -4,8 +4,8 @@ import react from "@astrojs/react";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
-import solid from '@astrojs/solid-js';
 import mdx from '@astrojs/mdx';
+import vue from '@astrojs/vue'
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,10 +20,10 @@ export default defineConfig({
       include: ['**/react/*'],
     }),
     sitemap(),
-    solid({
-      include: ['**/solid/*'],
-    }),
     mdx(),
+    vue({
+      include: ['**/vue/*.vue'],
+    })
   ],
   markdown: {
     remarkPlugins: [
