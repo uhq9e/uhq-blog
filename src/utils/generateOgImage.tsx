@@ -3,20 +3,21 @@ import type { SatoriOptions } from "satori";
 import { SITE } from "@config";
 import { writeFile } from "node:fs/promises";
 import { Resvg } from "@resvg/resvg-js";
-
+import MiSansRegular from "@assets/fonts/MiSans-Regular.ttf"
+import MiSansBold from "@assets/fonts/MiSans-Bold.ttf"
 
 
 const fetchFonts = async () => {
   // Regular Font
   const fontFileRegular = await fetch(
-    new URL("/fonts/MiSans-Regular.ttf", SITE.website).href
+    MiSansRegular
     // "https://www.1001fonts.com/download/font/ibm-plex-mono.regular.ttf"
   );
   const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
 
   // Bold Font
   const fontFileBold = await fetch(
-    new URL("/fonts/MiSans-Bold.ttf", SITE.website).href
+    MiSansBold
     // "https://www.1001fonts.com/download/font/ibm-plex-mono.bold.ttf"
   );
   const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
