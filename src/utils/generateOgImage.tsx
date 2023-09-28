@@ -7,13 +7,13 @@ import { Resvg } from "@resvg/resvg-js";
 const fetchFonts = async () => {
   // Regular Font
   const fontFileRegular = await fetch(
-    "/fonts/MiSans-Regular.ttf"
+    new URL("/fonts/MiSans-Regular.ttf", SITE.website).href
   );
   const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
 
   // Bold Font
   const fontFileBold = await fetch(
-    "/fonts/MiSans-Regular.ttf"
+    new URL("/fonts/MiSans-Bold.ttf", SITE.website).href
   );
   const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
 
