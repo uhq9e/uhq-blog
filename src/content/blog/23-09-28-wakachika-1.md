@@ -1,6 +1,7 @@
 ---
 pubDatetime: 2022-09-28
 title: 我发现这几条若千好像能几乎全占了
+postSlug: 23-09-28-wakachika-1
 draft: false
 tags:
   - yuyuyu
