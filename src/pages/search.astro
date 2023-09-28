@@ -5,7 +5,7 @@ import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
-import Search1 from "@components/react/Search";
+import SearchBar from "@components/Search";
 
 // Retrieve all articles
 const posts = await getCollection("blog", ({ data }) => !data.draft);
@@ -20,8 +20,8 @@ const searchList = posts.map(({ data }) => ({
 
 <Layout title={`搜索 | ${SITE.title}`}>
   <Header activeNav="search" />
-  <Main pageTitle="搜索" pageDesc="搜索任意内容……">
-    <Search1 client:load searchList={searchList} />
+  <Main pageTitle="搜索" pageDesc="搜索任何内容……">
+    <SearchBar client:load searchList={searchList} />
   </Main>
   <Footer />
 </Layout>

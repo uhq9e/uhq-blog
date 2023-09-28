@@ -4,7 +4,7 @@ import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
-import Card from "@components/Card.astro";
+import Card from "@components/Card";
 import LinkButton from "@components/LinkButton.astro";
 import slugify from "@utils/slugify";
 import type { CollectionEntry } from "astro:content";
@@ -23,7 +23,7 @@ const next = pageNum < totalPages ? "" : "disabled";
 
 <Layout title={`内容 | ${SITE.title}`}>
   <Header activeNav="posts" />
-  <Main pageTitle="内容" pageDesc="我发表的所有内容。">
+  <Main pageTitle="内容" pageDesc="我发布的所有内容。">
     <ul>
       {
         posts.map(({ data }) => (

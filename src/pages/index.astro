@@ -5,7 +5,7 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
-import Card from "@components/Card.astro";
+import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import slugify from "@utils/slugify";
@@ -14,6 +14,7 @@ import { SOCIALS, SITE } from "@config";
 const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
+const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---
@@ -22,7 +23,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>{SITE.title}</h1>
+      <h1 class="mr-2">{SITE.title}</h1>
       <a
         target="_blank"
         href="/rss.xml"
